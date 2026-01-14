@@ -11,7 +11,7 @@ void Buzzer::beep(int freq,int duration){
   tone(pin,freq,duration);
 }
 
-//Fontion d'arrêt du buzzer
+//Fonction d'arrêt du buzzer
 void Buzzer::stop(){
   noTone(pin);
 }
