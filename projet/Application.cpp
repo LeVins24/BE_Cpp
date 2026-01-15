@@ -27,13 +27,13 @@ void Application::run(void){
 
   //Vérifie si la vitesse limite est dépassée et déclenche l'alerte si c'est le cas
   if ((vitesse->read())>vitesse_limite){
-    buzzer->beep(3000,200); //Activation du buzzer, 3kHz pendant 200ms : alerte sonore
+    buzzer->beep(1000,200); //Activation du buzzer, 1kHz pendant 200ms : alerte sonore
     tableaubord->alert("Exces de Vitesse"); //Activation de l'alerte visuelle
   }
 
   //Vérifie si la distance minimale est franchie et déclenche l'alerte si c'est le cas
   else if ((distance->read())< minDistance){
-     buzzer->beep(3000,200); 
+     buzzer->beep(200,200); //200Hz pendant 200ms
      tableaubord->alert(distance->label()); //Activation de l'alerte visuelle :  affiche "Obstacle Proche"
   }
 
